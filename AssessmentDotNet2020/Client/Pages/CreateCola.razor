@@ -1,0 +1,92 @@
+﻿@page "/cola/create"
+@inject IRepositorio repositorio
+@using AssessmentDotNet2020.Shared.Entities;
+<h3>Crear Cola</h3>
+<EditForm Model="@people">
+    <table class="table">
+        <tr>
+            <td>Nombres</td>
+            <td> <input type="text" @bind="people.name" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" value="Save" @onclick="Crear"  />
+            </td>
+        </tr>
+    </table>
+    
+
+    <br />
+    
+    <div class="container-fluid">
+        <div>
+            <h1>Cola 1</h1>
+            <table class="table">
+                <tr>
+                    <td>Persona</td>
+                </tr>
+                @foreach (var item in cola1)
+                {
+            <tr>
+                <td>@item.PeopleId</td>
+            </tr>
+                }
+            </table>
+        </div>
+        <div>
+            <h1>Cola 2</h1>
+            <table class="table">
+                <tr>
+
+                    <td>Persona</td>
+                </tr>
+                @foreach (var item in cola2)
+                {
+                    <tr>
+                        <td>@item.PeopleId</td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+       
+
+    </div>
+
+    
+</EditForm>
+
+@code {
+    private People people = new People();
+    private List<ColaPeople> cola1 = new List<ColaPeople>();
+    private List<ColaPeople> cola2 = new List<ColaPeople>();
+
+
+    protected async override Task OnInitializedAsync()
+    {
+        await loadColas();
+    }
+
+    public async Task Crear()
+    {
+        var httpResponse = await repositorio.Post("api/people", people);
+        if (httpResponse.Error)
+        {
+            var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+            Console.WriteLine(body);
+        }
+        else
+        {
+            Console.WriteLine("Resigtro insertado con exito");
+            people = new People();
+        }
+        await loadColas();
+    }
+    public async Task loadColas()
+    {
+        var httpResponse = await repositorio.Get<List<ColaPeople>>($"api/people/{1}");
+        cola1 = httpResponse.Response;
+        httpResponse = await repositorio.Get<List<ColaPeople>>($"api/people/{2}");
+        cola2 = httpResponse.Response;
+    }
+}

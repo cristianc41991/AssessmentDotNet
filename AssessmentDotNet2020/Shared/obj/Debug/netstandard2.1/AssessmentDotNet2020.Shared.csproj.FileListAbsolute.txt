@@ -1,0 +1,9 @@
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\bin\Debug\netstandard2.1\AssessmentDotNet2020.Shared.deps.json
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\bin\Debug\netstandard2.1\AssessmentDotNet2020.Shared.dll
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\bin\Debug\netstandard2.1\AssessmentDotNet2020.Shared.pdb
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\obj\Debug\netstandard2.1\AssessmentDotNet2020.Shared.csprojAssemblyReference.cache
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\obj\Debug\netstandard2.1\AssessmentDotNet2020.Shared.AssemblyInfoInputs.cache
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\obj\Debug\netstandard2.1\AssessmentDotNet2020.Shared.AssemblyInfo.cs
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\obj\Debug\netstandard2.1\AssessmentDotNet2020.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\obj\Debug\netstandard2.1\AssessmentDotNet2020.Shared.dll
+C:\Users\Cristian\source\repos\AssessmentDotNet2020\AssessmentDotNet2020\Shared\obj\Debug\netstandard2.1\AssessmentDotNet2020.Shared.pdb
