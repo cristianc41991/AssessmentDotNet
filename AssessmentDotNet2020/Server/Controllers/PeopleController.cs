@@ -62,7 +62,7 @@ namespace AssessmentDotNet2020.Server.Controllers
             
 
 
-            people.name = people.name + "Resultados " + colas.Count();
+           
 
             context.Add(people);
             await context.SaveChangesAsync();
